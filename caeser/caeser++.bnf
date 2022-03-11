@@ -1,0 +1,145 @@
+﻿;Caeser++ BNF definitions
+
+;BASIC COMPONENTS
+;the special characters reserved for roman numerals
+<numeral>			::=	"C" | "D" | "I" | "L" | "M" | "V" | "X"
+;non-numerals are any alphabetic character except those reserved for roman numerals. u is completely ignored, as Latin doesn't recognise it
+<nonnumeral>		::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" |
+						"q" | "r" | "s" | "t" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "E" | "F" | "G" | "H" |
+						"J" | "K" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "W" | "Y" | "Z"
+;a digit may be the digits 0-9
+<digit>				::=	"0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+;a logic litreral is either true or false
+<logic-literal>		::= "verum" | "falsus"
+;a letter may be any alphabetic character
+<letter>			::=	<nonnumeral> | <numeral>
+;a pair of single quotes (') around a single character denotes a character literal
+<character>			::= "'" ( <letter> | <digit> | "u" | "U" ) "'"
+;a pair of double quotes (") around one or more characters denotes a string literal
+<string>			::= """ ( <letter> | <digit> | "u" | "U" ) { <letter> | <digit> | "u" | "U" } """
+;a variable/function identifier must begin with a non-numeral and must contain one or more characters
+<identifier>		::= <nonnumeral> { <letter> | <digit> }
+;a number is defined by one or more numerals
+<number>			::=	<numeral> { <numeral> }
+
+;LOGICAL OPERATORS
+
+;NUMERIC OPERATORS
+;addition requiers a numeric expression on either side of a plus (+) symbol
+<addition>			::=	<numeric-expression> "+" <numeric-expression>
+;subtraction requiers a numeric expression on either side of a minus (-) symbol
+<subtraction>		::=	<numeric-expression> "-" <numeric-expression>
+;multiplication requiers a numeric expression on either side of a astrisk (*)
+<multiplication>	::=	<numeric-expression> "*" <numeric-expression>
+;devision requiers a numeric expression on either side of a forward slash (/)
+<devision>			::=	<numeric-expression> "/" <numeric-expression>
+;a numeric expression can be a number or any operation that creates a number
+<numeric-expression>::= <number> | <addition> | <subtraction> | <multiplication> | <devision> | <identifier> | ???
+
+;TEXT OPERATORS
+;you can concatenate string literals, character literals and identifiers by placing them either side of the "et" keyword
+<concatenation>		::= ( <string> | <identifier> | <character> | <concatenation> ) et ( <string> | <identifier> |
+						<character> ) 
+;a text expression can be a string literal, character literal or a concatenation
+<text-expression>	::= <string> | <concatenation> | <character>
+;a logic expression can be a 
+<logic-expression>	::= | <logic-literal>
+
+;VARIABLE MANIPULATION
+;an expression can include either a numeric or text expression
+<expression>		::= <numeric-expression> | <text-expression> | <logic-expression>
+;string literals can be input from the console using the keyword "legere"
+<input>				::= "legere"
+;literals or variables can be output to the console using the keyword "scribere"
+<output>			::= "scribere" ( <identifier> | <expression> )
+;to assign a value to an identifier the identifer should be followed by "est" and then the expression or value
+<assignment>		::= <identifier> "est" ( <expression> | <input> )
+;incrementing a numeric identifier can be done by adding two pluses (++) after the identifier
+<increment>			::= <identifier> "++"
+;decrementing a numeric identifier can be done by adding two minuses (--) after the identifier
+<decrement>			::= <identifier> "--"
+
+<operator>			::=	(<assignment> | <increment> | <decrement> ) 
+
+;CODE STRUCTURES 
+;an if statement will evaluate a comparison
+
+;a while statement executes a code block while the comparison is true
+
+;to break out of a loop, use "ad finem"
+<break>				::= "ad finem"
+
+;PROGRAM ARCHITECTURE
+;a declaration must start with "sic" followed by an identifier and may include an assignment using "est" and an
+;expression
+<declaration>		::= "sic" <identifier> [ "est" <expression> ] ","
+;a declaration block is started with the phrase "By the decree of Caeser" and followed by one or more declarations
+<declaration-block>	::= By the decree of Caeser <declaration> { <declaration> }
+;a statement can be an assignement, increment or decrement, but must end with a full stop (.)
+<statement>			::= ( <expression> | <operator> | ??? ) "."
+;a statement block consists of one or more statements
+<statement-block>	::= <statement> { <statement> }
+;a program consists of a declaration block followed by the phrase "Hail Caeser" and ends with "Long live Rome"
+<program>			::= <declaration-block> Hail Caeser <statement-block> Long live Rome
+
+Tokens - informal definitions
+
+Some latin phrases that might come in handy...
+┌───────────────────────────────┬───────────────────────────┐
+│Phrase							│Meaning					│
+╞═══════════════════════════════╪═══════════════════════════╡
+│ab asino lanam 				│getting wool from an ass	│
+├───────────────────────────────┼───────────────────────────┤ 
+│qui audet adipiscitur			│(s)he who dares, wins		│
+├───────────────────────────────┼───────────────────────────┤
+│componere lites 				│To settle disputes			│
+├───────────────────────────────┼───────────────────────────┤
+│dramatis personae 				│characters in a play		│
+├───────────────────────────────┼───────────────────────────┤
+│ab initio						│from the beginning			│
+├───────────────────────────────┼───────────────────────────┤
+│ab origine						│from the origin			│
+├───────────────────────────────┼───────────────────────────┤
+│ad initium						│at the begining			│
+├───────────────────────────────┼───────────────────────────┤
+│ad infinitum					│without end; to infinity	│
+├───────────────────────────────┼───────────────────────────┤
+│ad extremum					│to the extreme				│
+├───────────────────────────────┼───────────────────────────┤
+│ad absurdum					│to the ridiculous			│
+├───────────────────────────────┼───────────────────────────┤
+│tempus							│time - returns epoch		│
+├───────────────────────────────┼───────────────────────────┤
+│ab urbe condita				│21/4/753BC		 			│
+├───────────────────────────────┼───────────────────────────┤
+│intra muros					│within the walls - private │
+├───────────────────────────────┼───────────────────────────┤
+│intra muros					│within the walls - private │
+└───────────────────────────────┴───────────────────────────┘
+
+Things to add
+┌───────────────────────────────┐
+│Structures to add				│
+╞═══════════════════════════════╡
+│if .. then .. else				│
+├───────────────────────────────┤
+│while .. do ..					│
+├───────────────────────────────┤
+│do .. while .. 				│
+├───────────────────────────────┤
+│do .. until ..					│
+├───────────────────────────────┤
+│for .. do .. 					│
+├───────────────────────────────┤
+│switch .. case .. default ..	│
+├───────────────────────────────┤
+│try .. catch .. final ..		│
+├───────────────────────────────┤
+│function <identifier> (..) ..	│
+├───────────────────────────────┤
+│ <identifier> (..)				│
+├───────────────────────────────┤
+│ <array> [.. , .. ]			│
+├───────────────────────────────┤
+│ object declaration			│
+└───────────────────────────────┘
