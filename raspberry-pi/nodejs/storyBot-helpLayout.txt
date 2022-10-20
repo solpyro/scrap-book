@@ -1,0 +1,23 @@
+/********************************************
+* Replace \t with '    ', and \r\n with		*
+* '");\n\t\t\tconsole.log("'				*
+* Add '\t\t\tconsole.log("' to the			*
+* beginning and '");" to the end.			*
+********************************************/
+
+Command			Behaviour
+quit [reason]	Gracefully logs out of the chat room.
+				Add a reason after Quit to replace the default reason.
+
+				c=2p
+				d=2s
+				s=3p
+				
+				2d=4s+6p+3c
+				2:13
+				(300/15)2
+				(20)2
+				40
+				
+				300 animals
+				d?
