@@ -1,0 +1,9 @@
+body {
+    margin:0px;
+    background-color: #4f4f4f; 
+    overflow: hidden; 
+}
+
+.draggable {
+    position:absolute;
+}
