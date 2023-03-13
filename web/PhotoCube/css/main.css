@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Playfair+Display&display=swap');
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}@-moz-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+@-webkit-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+@-o-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+@-ms-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+body {
+	margin:0px;
+}
+
+p {
+	font-family: 'Playfair Display', serif;
+	color: white;
+	text-align:center;
+	font-size:2rem;
+	margin:0.8rem 0rem;
+	text-shadow: 0 0 .2rem #000, 0 0 .5rem #000;
+}
+p.header {
+	font-family: 'Mea Culpa', cursive;
+	font-size:3rem
+}
+
+#viewport, #overlay, #todo {
+	position:absolute;
+	top:0px; bottom:0px;
+	left:0px; right:0px;
+	padding:0px;
+	margin:0px;
+	overflow:hidden;
+}
+
+#overlay {
+	pointer-events: none;
+	display: none;
+}
+#overlay.fade-in {
+	display: block;
+	animation: fadeIn 1s;
+	-moz-animation: fadeIn 1s;
+	-webkit-animation: fadeIn 1s;
+	-o-animation: fadeIn 1s;
+	-ms-animation: fadeIn 1s;
+}
+#overlay #confetti-canvas {
+	position:absolute;
+	top:0px; 
+	left:0px;
+}
+#overlay #bottom {
+	position: absolute;
+	bottom: 0px;
+	width:100%;
+}
+
+#todo {
+	pointer-events: none;
+	color: #999999;
+	padding: 10px;
+	font-family: monospace;
+}
+li {
+	padding-left: 20px;
+}
