@@ -11,3 +11,4 @@ A digital version of the physical cube Katrin and I used to announce our second 
 - Working multi texture/material code by [kmchuc](https://discourse.threejs.org/t/different-textures-on-each-face-of-cube/23700)
 - Easing function from [robjohn](https://math.stackexchange.com/a/121755/759376)
 - Mobile controls using [Touch Events](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Using_Touch_Events)
+- Object picking projection from [Soledad Penadés](https://soledadpenades.com/articles/three-js-tutorials/object-picking/)
