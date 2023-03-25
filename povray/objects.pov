@@ -9,7 +9,7 @@
  * 5 = file
  * 6 = feather
  */
-#declare objectNumber = 6;
+#declare objectNumber = 2;
 
 #switch (objectNumber)
 //----Pyramid of Balls
@@ -133,7 +133,7 @@ plane {
           hollow off
         }
         pigment { 
-          color rgbt <boxColourR, boxColourG, boxColourB, translucent>
+          color rgbt <colourR2a, colourG2a, colourB2a, translucent>
         }
       }
 //----bars
@@ -159,9 +159,9 @@ plane {
         #declare countZ = 0; 
         #declare countY = countY + 1;
       #end
-      translate <vectorX, vectorY, vectorZ> 
-      scale <scaleX, scaleY, scaleZ> 
-      rotate <rotateX, rotateY, rotateZ>
+      translate <vectorX2, vectorY2, vectorZ2> 
+      scale <scaleX2, scaleY2, scaleZ2> 
+      rotate <rotateX2, rotateY2, rotateZ2>
     }
   #break
   #case (3)
