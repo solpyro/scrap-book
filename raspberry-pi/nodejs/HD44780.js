@@ -88,6 +88,7 @@ exports.message = function(text) {
 			exports.cmd(0xC0);
 		else
 			exports.cmd(chr.charCodeAt(0), true);
+	}
 }
 
 //open the GPIO connections
