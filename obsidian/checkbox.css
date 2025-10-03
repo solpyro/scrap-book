@@ -1,10 +1,12 @@
+/* Icon data urls from https://lucide.dev/icons/ */
+
 /* Star, Blue */
 input[type=checkbox][data-task="*"] {
 	background-color: rgb(0, 116, 206);
 	border-color: rgb(0, 116, 206);
 }
 input[type=checkbox][data-task="*"]:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0.63,5.5881l4.86628,0l1.50372,-4.56906l1.50372,4.56906l4.86628,0l-3.93689,2.8238l1.5038,4.56906l-3.9369,-2.82388l-3.9369,2.82388l1.5038,-4.56906l-3.9369,-2.8238z'/%3E%3C/svg%3E"); /* * */
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN0YXItaWNvbiBsdWNpZGUtc3RhciI+PHBhdGggZD0iTTExLjUyNSAyLjI5NWEuNTMuNTMgMCAwIDEgLjk1IDBsMi4zMSA0LjY3OWEyLjEyMyAyLjEyMyAwIDAgMCAxLjU5NSAxLjE2bDUuMTY2Ljc1NmEuNTMuNTMgMCAwIDEgLjI5NC45MDRsLTMuNzM2IDMuNjM4YTIuMTIzIDIuMTIzIDAgMCAwLS42MTEgMS44NzhsLjg4MiA1LjE0YS41My41MyAwIDAgMS0uNzcxLjU2bC00LjYxOC0yLjQyOGEyLjEyMiAyLjEyMiAwIDAgMC0xLjk3MyAwTDYuMzk2IDIxLjAxYS41My41MyAwIDAgMS0uNzctLjU2bC44ODEtNS4xMzlhMi4xMjIgMi4xMjIgMCAwIDAtLjYxMS0xLjg3OUwyLjE2IDkuNzk1YS41My41MyAwIDAgMSAuMjk0LS45MDZsNS4xNjUtLjc1NWEyLjEyMiAyLjEyMiAwIDAgMCAxLjU5Ny0xLjE2eiIvPjwvc3ZnPg=="); /* * star */
 }
  /* Arrow, Green */
 input[type=checkbox][data-task=">"]:checked {
@@ -13,7 +15,7 @@ input[type=checkbox][data-task=">"]:checked {
 }
 input[type=checkbox][data-task=">"]:after {
   background-color: white;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.12 7L3.26667 11.76L4.57333 13.0667L10.7333 7L4.57333 0.933332L3.26667 2.24L8.12 7Z'/%3E%3C/svg%3E"); /* > */
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXBsYXktaWNvbiBsdWNpZGUtcGxheSI+PHBhdGggZD0iTTUgNWEyIDIgMCAwIDEgMy4wMDgtMS43MjhsMTEuOTk3IDYuOTk4YTIgMiAwIDAgMSAuMDAzIDMuNDU4bC0xMiA3QTIgMiAwIDAgMSA1IDE5eiIvPjwvc3ZnPg=="); /* > play */
 }
 /* Question, Orange */
 input[type=checkbox][data-task="?"] {
@@ -21,7 +23,7 @@ input[type=checkbox][data-task="?"] {
 	border-color: #ff9a00;
 }
 input[type=checkbox][data-task="?"]:after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m3.28723,5.20262c0.30487,0.07622 1.79012,0.08664 1.75569,0.05223c0.56797,-2.04892 1.73508,-1.94051 2.25959,-2.00031c1.59824,-0.04459 1.66343,1.71942 1.629,1.68502c0.07022,0.57977 0.16586,1.0071 -1.23749,2.04419c-0.60221,0.49971 -1.53469,0.66915 -1.7558,2.8711l1.70499,-0.03001c0.23769,-0.54995 -0.12543,-1.17657 1.41534,-1.97318c1.96531,-1.33754 1.87362,-2.61037 1.81379,-3.22913c0.18687,-2.83652 -3.15951,-3.19299 -3.72748,-3.15117c-3.0013,0.06401 -3.64139,2.19589 -3.85763,3.73126z'/%3E%3Cpath d='m5.75985,10.73441l0.04885,1.99378l1.97259,-0.07427l-0.02799,-1.89542l-1.99344,-0.02408z'/%3E%3C/svg%3E"); /* ? */
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNpcmNsZS1xdWVzdGlvbi1tYXJrLWljb24gbHVjaWRlLWNpcmNsZS1xdWVzdGlvbi1tYXJrIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxwYXRoIGQ9Ik05LjA5IDlhMyAzIDAgMCAxIDUuODMgMWMwIDItMyAzLTMgMyIvPjxwYXRoIGQ9Ik0xMiAxN2guMDEiLz48L3N2Zz4="); /* ? circle-question-mark */
 }
 /* Exclaim, Red */
 input[type=checkbox][data-task="!"] {
@@ -30,7 +32,7 @@ input[type=checkbox][data-task="!"] {
 }
 input[type=checkbox][data-task="!"]:after {
   background-color: white;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewbox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='4' y='2.5' width='1.5' height='6'/%3E%3Cellipse cx='4.75' cy='11.5' ry='1' rx='1'/%3E%3C/svg%3E"); /* ! */
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXRyaWFuZ2xlLWFsZXJ0LWljb24gbHVjaWRlLXRyaWFuZ2xlLWFsZXJ0Ij48cGF0aCBkPSJtMjEuNzMgMTgtOC0xNGEyIDIgMCAwIDAtMy40OCAwbC04IDE0QTIgMiAwIDAgMCA0IDIxaDE2YTIgMiAwIDAgMCAxLjczLTMiLz48cGF0aCBkPSJNMTIgOXY0Ii8+PHBhdGggZD0iTTEyIDE3aC4wMSIvPjwvc3ZnPg=="); /* ! triangle-alert */
 }
 /* Dash, Gray */  
 input[type=checkbox][data-task="-"] {
@@ -39,7 +41,7 @@ input[type=checkbox][data-task="-"] {
 }
 input[type=checkbox][data-task="-"]:after {
   background-color: white;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='6.5' width='13' height='1'/%3E%3C/svg%3E"); /* - */
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1pbnVzLWljb24gbHVjaWRlLW1pbnVzIj48cGF0aCBkPSJNNSAxMmgxNCIvPjwvc3ZnPg=="); /* - minus */
 }
 .HyperMD-list-line:has(input[type=checkbox][data-task="-"]) {
 	font-style: italic;
